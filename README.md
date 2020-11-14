@@ -68,3 +68,37 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Atlaskit - Atlassian Design System & Component Library
+
+## Peer Dependencies:
+- `npm i react@^16.8 react-dom@^16.8 styled-components@^3.2`
+- `npm i react-intl@^2.6`
+
+## CSS Reset:
+- `npm i @atlaskit/css-reset`
+
+## Packages Installed:
+- `npm i @atlaskit/avatar`
+- `npm i @atlaskit/avatar-group`
+- `npm i @atlaskit/badge`
+- `npm i @atlaskit/banner`
+- `npm i @atlaskit/breadcrumbs`
+- `npm i @atlaskit/button`
+- `npm i @atlaskit/checkbox`
+- `npm i @atlaskit/dropdown-menu`
+- `npm i @atlaskit/flag`
+- `npm i @atlaskit/inline-message`
+- `npm i @atlaskit/lozenge`
+- `npm i @atlaskit/modal-dialog`
+- `npm i @atlaskit/pagination`
+- `npm i @atlaskit/progress-indicator`
+- `npm i @atlaskit/progress-tracker`
+- `npm i @atlaskit/radio`
+- `npm i @atlaskit/section-message`
+- `npm i @atlaskit/select`
+- `npm i @atlaskit/spinner`
+- `npm i @atlaskit/tabs`
+- `npm i @atlaskit/textfield`
+- `npm i @atlaskit/toggle`
+
