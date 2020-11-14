@@ -88,6 +88,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - `npm i @atlaskit/checkbox`
 - `npm i @atlaskit/dropdown-menu`
 - `npm i @atlaskit/flag`
+- `npm i @atlaskit/icon`
 - `npm i @atlaskit/inline-message`
 - `npm i @atlaskit/lozenge`
 - `npm i @atlaskit/modal-dialog`

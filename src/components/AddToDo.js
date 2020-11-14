@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import ArrowRightIcon from '@atlaskit/icon/glyph/arrow-right';
+import Button from '@atlaskit/button';
 
 export class AddToDo extends Component {
     state = {
@@ -26,15 +28,21 @@ export class AddToDo extends Component {
                     placeholder="Add To Do..." 
                     style={{ flex: '10', padding: '5px' }}
                     />
+
                     {this.props.error
                     && <p>{this.props.error}</p>
                     }
-                <input
+
+                <Button
                     type="submit"
                     value="Submit"
                     className="btn"
                     style={{ flex: '1' }}
-                />
+                    appearance="primary"
+                    iconAfter={<ArrowRightIcon label="Arrow right icon" size="small" />}
+                >
+                    Add
+                </Button>
             </form>
         )
     }

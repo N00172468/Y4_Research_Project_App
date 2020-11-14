@@ -19,7 +19,7 @@ export class ToDoItem extends Component {
         return {
             textDecoration: this.props.todo.completed ? 'line-through' : 'none',
             
-            background: '#235492',
+            background: '#eee',
             padding: '10px',
             borderBottom: '1px #ccc dotted'
         }
