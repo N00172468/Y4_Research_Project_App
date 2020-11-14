@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import { Checkbox } from '@atlaskit/checkbox';
+import Button from '@atlaskit/button';
 
 export class ToDoItem extends Component {
     // Turning a style into a function:
@@ -39,9 +41,23 @@ export class ToDoItem extends Component {
                     {/* bind() is needed to allow event handler to find the id */}
                     {/* <input type="checkbox" onChange={this.props.markComplete.bind(this, this.props.todo.id)} /> {''}  */}
                     {/* { this.props.todo.title } */}
-                    <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} /> {''} 
-                    { title }
-                    <button onClick={this.props.deleteToDo.bind(this, id)} style={btnStyle}>x</button>
+                    <Checkbox 
+                        onChange={this.props.markComplete.bind(this, id)}
+                        value="default checkbox"
+                        label={ title }
+                        name="checkbox-default"
+                        testId="cb-default"
+                    /> 
+
+                    <Button 
+                        onClick={this.props.deleteToDo.bind(this, id)} 
+                        style={btnStyle}
+                        className="btn"
+                        appearance="danger"
+                        spacing="compact"
+                    >
+                            x
+                    </Button>
                 </p>
             </div>
         )
@@ -63,12 +79,12 @@ ToDoItem.propTypes = {
 // }
 
 const btnStyle = {
-    background: '#ff0000',
-    color: '#fff',
-    border: 'none',
-    padding: '5px 9px',
-    borderRadius: '50%',
-    cursor: 'pointer',
+    // background: '#ff0000',
+    // color: '#fff',
+    // border: 'none',
+    // padding: '5px 9px',
+    // borderRadius: '50%',
+    // cursor: 'pointer',
     float: 'right'
 }
 
