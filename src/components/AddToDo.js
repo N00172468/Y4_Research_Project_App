@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ArrowRightIcon from '@atlaskit/icon/glyph/arrow-right';
 import Button from '@atlaskit/button';
+import Textfield from '@atlaskit/textfield';
 
 export class AddToDo extends Component {
     state = {
@@ -20,7 +21,7 @@ export class AddToDo extends Component {
     render() {
         return (
             <form onSubmit={this.onSubmit} style={{ display: 'flex' }}>
-                <input 
+                <Textfield 
                     type="text" 
                     value={this.state.title}
                     onChange={this.onChange}
@@ -30,7 +31,8 @@ export class AddToDo extends Component {
                     />
 
                     {this.props.error
-                    && <p>{this.props.error}</p>
+                        && 
+                        <p>{this.props.error}</p>
                     }
 
                 <Button
