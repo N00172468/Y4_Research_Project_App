@@ -102,6 +102,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - `npm i @atlaskit/menu`
 - `npm i @atlaskit/modal-dialog`
 - `npm i @atlaskit/motion`
+- `npm i @atlaskit/atlassian-navigation`
 - `npm i @atlaskit/page`
 - `npm i @atlaskit/pagination`
 - `npm i @atlaskit/progress-indicator`

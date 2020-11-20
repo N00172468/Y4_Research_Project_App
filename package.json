@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@atlaskit/atlassian-navigation": "^0.12.4",
     "@atlaskit/avatar": "^20.0.6",
     "@atlaskit/avatar-group": "^8.0.11",
     "@atlaskit/badge": "^14.0.6",
