@@ -1,3 +1,17 @@
+import React from 'react';
+
+function App() {
+  return (
+    <div className="App">
+      Hello World
+    </div>
+  )
+}
+
+export default App;
+
+
+
 // import React, { Component } from 'react';
 // import ToDo from './components/ToDo';
 // import Header from './components/layout/Header';
@@ -87,14 +101,3 @@
 // export default App;
 
 
-import React from 'react';
-
-function App() {
-  return (
-    <div className="App">
-      Hello World
-    </div>
-  )
-}
-
-export default App;
