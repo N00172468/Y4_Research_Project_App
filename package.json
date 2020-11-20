@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@atlaskit/atlassian-navigation": "^0.12.4",
+    "@atlaskit/atlassian-switcher": "^8.6.1",
     "@atlaskit/avatar": "^20.0.6",
     "@atlaskit/avatar-group": "^8.0.11",
     "@atlaskit/badge": "^14.0.6",

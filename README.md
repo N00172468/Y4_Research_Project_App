@@ -112,6 +112,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - `npm i @atlaskit/section-message`
 - `npm i @atlaskit/select`
 - `npm i @atlaskit/spinner`
+- `npm i @atlaskit/atlassian-switcher`
 - `npm i @atlaskit/tabs`
 - `npm i @atlaskit/textfield`
 - `npm i @atlaskit/toggle`
