@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Calendar from '@atlaskit/calendar';
+import Button from '@atlaskit/button';
 
 export default class CreateInfo extends Component {
     constructor(props) {
@@ -18,6 +20,13 @@ export default class CreateInfo extends Component {
 
             users: []
         };
+    };
+
+    componentDidMount() {
+        this.setState({
+            users: ['test user'],
+            username: 'test user'
+        });
     };
 
     onChangeUsername(e) {
@@ -62,7 +71,77 @@ export default class CreateInfo extends Component {
     render() {
         return (
             <div>
-                <p>You are on the Create Info Component!</p>
+                {/* <p>You are on the Create Info Component!</p> */}
+
+                <h3>Create New Info Log</h3>
+
+                <form onSubmit={this.onSubmit}>
+                    <div>
+                        <label>Username: </label>
+
+                        <select 
+                            ref="userInput"
+                            required
+                            value={this.state.username}
+                            onChange={this.onChangeUsername}
+                        >
+                            {
+                                this.state.users.map(function(user) {
+                                    return <option
+                                                key={user}
+                                                value={user}
+                                            >
+                                            	{user}
+                                            </option>
+                                })
+                            };
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Description: </label>
+
+                        <input
+                            type="text"
+                            value={this.state.description}
+                            onChange={this.onChangeDescription}
+                        />
+                    </div>
+
+                    <div>
+                        <label>Experience (in Years): </label>
+
+                        <input
+                            type="number"
+                            value={this.state.experience}
+                            onChange={this.onChangeExperience}
+                        />
+                    </div>
+
+                    <div>
+                        <label>Date: </label>
+
+                        <Calendar
+                            innerProps={{
+                                style: {
+                                    border: '1px solid blue',
+                                    display: 'inline-block'
+                                }
+                            }}
+                            onChange={this.onChangeDate}
+                        />
+                    </div>
+
+                    <div>
+                        <Button
+                            appearance="primary"
+                            type="submit"
+                            value="Create Info Log"
+                        >
+                            Submit
+                        </Button>
+                    </div>
+                </form>
             </div>
         );
     };
