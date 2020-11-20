@@ -43,9 +43,9 @@ export default class Navbar extends Component {
 
                 <div>
                     <ul>
-                        <li>
+                        {/* <li>
                             <Link to="/" onClick={this.onClose}>Med. App</Link>
-                        </li>
+                        </li> */}
 
                         <li>
                             <Link to="/" onClick={this.onClose}>Info List</Link>
