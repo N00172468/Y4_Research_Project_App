@@ -1,12 +1,26 @@
 import React from 'react';
+import { BrowseRouter as Router, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import InfoList from "./components/InfoList";
+import EditInfo from "./components/EditInfo";
+import CreateInfo from "./components/CreateInfo";
+import CreateUser from "./components/CreateUser";
 
 function App() {
   return (
-    <div className="App">
-      Hello World
-    </div>
-  )
-}
+    <Router>
+      <Navbar />
+
+      <br />
+
+      <Route path="/" exact component={InfoList} />
+      <Route path="/edit/:id" component={EditInfo} />
+      <Route path="/create" component={CreateInfo} />
+      <Route path="/user" component={CreateUser} />
+    </Router>
+  );
+};
 
 export default App;
 
