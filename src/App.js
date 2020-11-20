@@ -7,17 +7,19 @@ import EditInfo from "./components/EditInfo";
 import CreateInfo from "./components/CreateInfo";
 import CreateUser from "./components/CreateUser";
 
+import './App.css';
+
 function App() {
   return (
     <Router>
-      <Navbar />
+      <div className="container">
+        <Navbar />
 
-      <br />
-
-      <Route path="/" exact component={InfoList} />
-      <Route path="/edit/:id" component={EditInfo} />
-      <Route path="/create" component={CreateInfo} />
-      <Route path="/user" component={CreateUser} />
+        <Route path="/" exact component={InfoList} />
+        <Route path="/edit/:id" component={EditInfo} />
+        <Route path="/create" component={CreateInfo} />
+        <Route path="/user" component={CreateUser} />
+      </div>
     </Router>
   );
 };
