@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Button from '@atlaskit/button/standard-button';
 import Drawer from '@atlaskit/drawer';
+import EditorLayoutTwoLeftSidebarIcon from '@atlaskit/icon/glyph/editor/layout-two-left-sidebar';
 
 export default class Navbar extends Component {
     state = {
@@ -64,7 +65,7 @@ export default class Navbar extends Component {
             </Drawer>
 
             <Button id="open-drawer" type="button" onClick={this.openDrawer}>
-                Open Drawer
+                <EditorLayoutTwoLeftSidebarIcon />
             </Button>
             </div>
         );
