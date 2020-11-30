@@ -34,17 +34,22 @@ export default class Navbar extends Component {
 
     render() {
         return (
-            <div style={{ padding: '10px', display: 'flex'}} className="primaryColBackground">
+            <div style={{ padding: '10px', display: 'flex'}}>
                 <div style={{ marginLeft: "auto" }}>
                     <Drawer
                         onClose={this.onClose}
                         onCloseComplete={this.onCloseComplete}
                         onOpenComplete={this.onOpenComplete}
                         isOpen={this.state.isDrawerOpen}
-                        width="wide"
+                        width="narrow"
                     >
                         <div>
-                            <h5 style={{ fontSize: '20px' }}>Full-Stack React App. Demo</h5>
+                            <h5 
+                                className="primaryColBackground" 
+                                style={{ fontSize: '20px' }}
+                            >
+                                Full-Stack React App. Demo
+                            </h5>
                         </div>
 
                         <div>
@@ -73,7 +78,12 @@ export default class Navbar extends Component {
                         </div>
                     </Drawer>
 
-                    <Button id="open-drawer" type="button" onClick={this.openDrawer}>
+                    <Button 
+                        id="open-drawer" 
+                        type="button" 
+                        onClick={this.openDrawer}
+                        appearance="primary"
+                    >
                         <EditorLayoutTwoLeftSidebarIcon />
                     </Button>
                 </div>

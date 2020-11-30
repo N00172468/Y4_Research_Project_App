@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="container">
+      <div className="container secondaryColBackground">
         <Navbar />
 
         <Route path="/" exact component={InfoList} />
