@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
+import Button from '@atlaskit/button';
+import EditorEditIcon from '@atlaskit/icon/glyph/editor/edit';
+import EditorRemoveIcon from '@atlaskit/icon/glyph/editor/remove';
+
 import './../App.css'
 
 const Info = props => (
@@ -11,9 +15,28 @@ const Info = props => (
         <td>{props.info.experience}</td>
         <td>{props.info.date.substring(0,10)}</td>
         <td>
-            <Link to={"/edit/" + props.info._id}>Edit</Link> 
-            | 
-            <a href="#" onClick={() => { props.deleteInfo(props.info._id) }}>Delete</a>
+            <Button
+                appearance="warning"
+                type="submit"
+                value="Edit"
+            >
+                <Link to={"/edit/" + props.info._id}>
+                    <EditorEditIcon />
+                    Edit
+                </Link> 
+            </Button>
+            
+            {' '}
+
+            <Button
+                appearance="danger"
+                type="submit"
+                value="Delete"
+            >
+                <a href="#" onClick={() => { props.deleteInfo(props.info._id) }}>
+                    <EditorRemoveIcon />
+                </a>
+            </Button>
         </td>
     </tr>
 );
