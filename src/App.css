@@ -61,10 +61,67 @@ a {
 }
 
 .tertiaryCol {
-  color: #673ab7;
+  color: #8041ec;
 }
 
 .tertiaryColBackground {
   background: #673ab7;
 }
 /* -------------------------------- */
+
+
+/* ---------- TABLE ---------- */
+.caption {
+  font-size: 24px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.heads {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Spacing */
+thead th:nth-child(1) {
+  width: 20%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 25%;
+}
+
+th, td {
+  padding: 15px;
+  
+}
+
+/* Striping */
+table {
+  background-color: #00ccff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color:#c7a8fd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e8daff;
+}
+/* --------------------------- */

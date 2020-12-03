@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
+import './../App.css'
+
 const Info = props => (
     <tr>
         <td>{props.info.username}</td>
@@ -9,7 +11,9 @@ const Info = props => (
         <td>{props.info.experience}</td>
         <td>{props.info.date.substring(0,10)}</td>
         <td>
-            <Link to={"/edit/" + props.info._id}>Edit</Link> | <a href="#" onClick={() => { props.deleteInfo(props.info._id) }}>Delete</a>
+            <Link to={"/edit/" + props.info._id}>Edit</Link> 
+            | 
+            <a href="#" onClick={() => { props.deleteInfo(props.info._id) }}>Delete</a>
         </td>
     </tr>
 );
@@ -53,24 +57,26 @@ export default class InfoList extends Component {
 
     render() {
         return (
-            <div>
-                <h3>Logged Info</h3>
+            <div style={{ width: '1000px'}}>
+                <h3 className="caption">Logged <span className="tertiaryCol">Info</span></h3>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Username</th>
-                            <th>Description</th>
-                            <th>Experience</th>
-                            <th>Date</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+                <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                    <table>
+                        <thead className="heads">
+                            <tr>
+                                <th>Username</th>
+                                <th>Description</th>
+                                <th>Experience</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        { this.infoList() }
-                    </tbody>
-                </table>
+                        <tbody style={{ textAlign: 'center', fontFamily: 'Open Sans' }}>
+                            { this.infoList() }
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
     };
