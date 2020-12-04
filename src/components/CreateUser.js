@@ -40,31 +40,35 @@ export default class CreateUser extends Component {
 
     render() {
         return (
-            <div>
-                {/* <p>You are on the Create User Component!</p> */}
+            <div style={{ width: '1000px'}}>
+                <div className="caption">
+                    <h3>Create New <span className="tertiaryCol">User</span></h3>
+                </div>
 
-                <h3>Create New User</h3>
-
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit} className="heads">
                     <div>
-                        <label>Username: </label>
+                        <label style={{ marginLeft: '10%' }}>Username: </label>
 
                         <input 
                             type="text"
                             required
                             value={this.state.username}
                             onChange={this.onChangeUsername}
+                            className="dropDown"
+                            style={{ width: '60%' }}
                         />
                     </div>
 
-                    <div>
-                        <Button
-                            appearance="primary"
-                            type="submit"
-                            value="Create User"
-                        >
-                            Submit
-                        </Button>
+                    <div style={{ padding: '10px', display: 'flex'}}>
+                        <div style={{ marginLeft: "auto" }}>
+                            <Button
+                                appearance="primary"
+                                type="submit"
+                                value="Create User"
+                            >
+                                Submit
+                            </Button>
+                        </div>
                     </div>
                 </form>
             </div>
