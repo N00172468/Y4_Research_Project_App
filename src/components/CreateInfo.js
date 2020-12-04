@@ -4,6 +4,8 @@ import axios from 'axios'
 import Calendar from '@atlaskit/calendar';
 import Button from '@atlaskit/button';
 
+import './../App.css'
+
 export default class CreateInfo extends Component {
     constructor(props) {
         super(props);
@@ -85,20 +87,21 @@ export default class CreateInfo extends Component {
 
     render() {
         return (
-            <div>
-                {/* <p>You are on the Create Info Component!</p> */}
+            <div style={{ width: '1000px'}}>
+                <div className="caption">
+                    <h3>Create New <span className="tertiaryCol">Info Log</span></h3>
+                </div>
 
-                <h3>Create New Info Log</h3>
-
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit} className="heads">
                     <div>
-                        <label>Username: </label>
+                        <label style={{ marginLeft: '10%' }}>Username: </label>
 
                         <select 
                             ref="userInput"
                             required
                             value={this.state.username}
                             onChange={this.onChangeUsername}
+                            className="dropDown"
                         >
                             {
                                 this.state.users.map(function(user) {
@@ -111,50 +114,52 @@ export default class CreateInfo extends Component {
                                 })
                             };
                         </select>
-                    </div>
 
-                    <div>
                         <label>Description: </label>
 
                         <input
                             type="text"
                             value={this.state.description}
                             onChange={this.onChangeDescription}
+                            className="dropDown"
                         />
                     </div>
 
-                    <div>
+                    <div style={{ marginTop: '20px', marginLeft: '10%' }}>
                         <label>Experience (in Years): </label>
 
                         <input
                             type="number"
                             value={this.state.experience}
                             onChange={this.onChangeExperience}
+                            className="dropDown"
+                            style={{ width: '58%' }}
                         />
                     </div>
 
-                    <div>
+                    <div style={{ marginTop: '20px', marginLeft: '10%' }}>
                         <label>Date: </label>
 
                         <Calendar
                             innerProps={{
                                 style: {
-                                    border: '1px solid blue',
-                                    display: 'inline-block'
+                                    display: 'flex'
                                 }
                             }}
                             onChange={this.onChangeDate}
                         />
                     </div>
 
-                    <div>
-                        <Button
-                            appearance="primary"
-                            type="submit"
-                            value="Create Info Log"
-                        >
-                            Submit
-                        </Button>
+                    <div style={{ padding: '10px', display: 'flex'}}>
+                        <div style={{ marginLeft: "auto" }}>
+                            <Button
+                                appearance="primary"
+                                type="submit"
+                                value="Create Info Log"
+                            >
+                                Submit
+                            </Button>
+                        </div>
                     </div>
                 </form>
             </div>

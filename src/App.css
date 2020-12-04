@@ -124,4 +124,16 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
   background-color: #e8daff;
 }
+/* ---------------------------- */
+
+
+/* ---------- FORMS ---------- */
+.dropDown {
+  padding: 7px;
+  border-radius: 2px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
 /* --------------------------- */
